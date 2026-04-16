@@ -156,6 +156,22 @@
       to   { transform: translateX(8px); }
     }
     #sign.hidden { opacity: 0; }
+
+    .mobile-arrow { display: none; }
+
+    @media (max-width: 600px) {
+      #topbar {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        gap: 8px;
+      }
+      #sign {
+        font-size: 15px;
+        padding: 8px 16px;
+      }
+      .desktop-arrow { display: none; }
+      .mobile-arrow  { display: inline; }
+    }
   </style>
 </head>
 <body>
@@ -166,7 +182,8 @@
 <div id="topbar">
   <div id="sign">
     <span>Start the party!</span>
-    <span class="arrow">→</span>
+    <span class="arrow desktop-arrow">→</span>
+    <span class="arrow mobile-arrow">↑</span>
   </div>
 
   <div id="controls">
